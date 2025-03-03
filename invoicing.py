@@ -111,6 +111,7 @@ class InvoiceApp:
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
             ('FONTSIZE', (0, 0), (-1, 0), 10),
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('LEFTPADDING', (0, 0), (0, -1), 10),
         ]))
         elements.append(invoice_table)
         elements.append(Spacer(1, 12))
@@ -119,7 +120,7 @@ class InvoiceApp:
         bags_board_price = {"None": 0.00, "Current Size BCW Bag & Board": 0.15, "Mylites2 with Half Back": 0.40, "Mylites 2 with Full Back": 0.50}
         pre_orders_bags_board_total = bags_board_price[bag_board_type] * pre_orders_bag_board_qty
         bags_boards_table = Table(
-            [["Bags and Boards", pre_orders_bag_board_qty, f"${bags_board_price[bag_board_type]: .2f}", f"${pre_orders_bags_board_total:.2f}"]], 
+            [["Bags and Boards", pre_orders_bag_board_qty, f"${bags_board_price[bag_board_type]:.2f}", f"${pre_orders_bags_board_total:.2f}"]], 
             colWidths=[320, 60, 80, 80]
         )
         elements.append(bags_boards_table)
