@@ -1,8 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
-from pdf_generator import create_pdf
-import os
+from pdf_generator import create_pdf  # Import the create_pdf function
 
 class InvoiceApp:
     def __init__(self, root):
